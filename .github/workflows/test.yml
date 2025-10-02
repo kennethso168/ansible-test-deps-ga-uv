@@ -1,0 +1,27 @@
+---
+name: Test python and ansible
+
+on:
+  pull_request:
+
+jobs:
+  test-deps:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+      - name: Install uv
+        uses: astral-sh/setup-uv@d0cc045d04ccac9d8b7881df0226f9e82c39688e # v6.8.0
+        with:
+          enable-cache: true
+      - name: Generate SSH key
+        run: ssh-keygen -t ed25519 -f "${HOME}/.ssh/id_ed25519" -q -P ""
+      - name: Setup SSH Agent
+        uses: tanmancan/action-setup-ssh-agent-key@24fe7f84181d208a2194df1f28ac10333ce1461b # v1.0.0
+      - name: Add key
+        run: ssh-add
+      - name: Store ansible-vault key to keyring
+        run: uv run keyring set ansible-vault key < <(echo '123456')
+      - name: Run test ansible playbook
+        run: uv run ansible-playbook -i inventory pb_test.yml
