@@ -1,0 +1,28 @@
+---
+- name: Test playbook that only tests the dependencies are working
+  hosts: localhost
+
+  tasks:
+    - name: Debug
+      ansible.builtin.debug:
+        msg: "Hello world"
+
+    - name: Test ansible vault decryption
+      ansible.builtin.assert:
+        that:
+          - test_vault_secret == 'SuperSecret'
+
+    - name: Test community.general.dig
+      ansible.builtin.assert:
+        that:
+          - "(lookup('community.general.dig', 'one.one.one.one.')) is match('^(1\\.1\\.1\\.1|1\\.0\\.0\\.1),(1\\.1\\.1\\.1|1\\.0\\.0\\.1)$')"
+
+    - name: Test ansible.utils.ipaddr
+      ansible.builtin.assert:
+        that:
+          - "(['1.1.1.1', '192.168.0.1'] | ansible.utils.ipaddr('public'))[0] == '1.1.1.1'"
+
+    - name: Test community.general.json_query
+      ansible.builtin.assert:
+        that:
+          - "(domain_definition | community.general.json_query('domain.server[?cluster==`cluster1`].port') | join(',')) == '8080,8090'"

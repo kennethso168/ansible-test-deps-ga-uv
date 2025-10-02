@@ -1,0 +1,22 @@
+[project]
+name = "ansible-test-deps-ga-uv"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "ansible>=11.10.0,<12",
+    "dnspython>=2.8.0",
+    "jmespath>=1.0.1",
+    "keyring>=25.6.0",
+    "netaddr>=1.3.0",
+    "proxmoxer>=2.2.0",
+    "pyasyncore>=1.0.4",
+    "sagecipher>=0.7.5",
+    "setuptools>=80.9.0,<81",
+]
+
+[dependency-groups]
+dev = [
+    "ansible-lint>=25.9.0",
+]

@@ -1,0 +1,31 @@
+---
+test_vault_secret: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          36353861303939363234616339393736306139366134346637353935333736396639636630366363
+          6235663231363332313765663034646162346338323161390a363961383963373132333164646137
+          38663732356534343535373132393165356431333431346363336235366266616235336664343238
+          3234626634616132620a613636636266373836303936323038326161613737313530653037613461
+          3762
+domain_definition:
+  domain:
+    cluster:
+      - name: cluster1
+      - name: cluster2
+    server:
+      - name: server11
+        cluster: cluster1
+        port: '8080'
+      - name: server12
+        cluster: cluster1
+        port: '8090'
+      - name: server21
+        cluster: cluster2
+        port: '9080'
+      - name: server22
+        cluster: cluster2
+        port: '9090'
+    library:
+      - name: lib1
+        target: cluster1
+      - name: lib2
+        target: cluster2
