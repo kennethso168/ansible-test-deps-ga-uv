@@ -22,6 +22,6 @@ jobs:
       - name: Add key
         run: ssh-add
       - name: Store ansible-vault key to keyring
-        run: uv run keyring set ansible-vault key < <(echo '123456')
+        run: uv run keyring set ansible-test-deps-ga-uv ansible-vault-key < <(echo '123456')
       - name: Run test ansible playbook
         run: uv run ansible-playbook -i inventory pb_test.yml
