@@ -15,6 +15,7 @@ jobs:
         uses: astral-sh/setup-uv@d0cc045d04ccac9d8b7881df0226f9e82c39688e # v6.8.0
         with:
           enable-cache: true
+          prune-cache: false
       - name: Generate SSH key
         run: ssh-keygen -t ed25519 -f "${HOME}/.ssh/id_ed25519" -q -P ""
       - name: Setup SSH Agent
