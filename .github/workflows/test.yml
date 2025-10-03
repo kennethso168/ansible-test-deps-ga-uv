@@ -19,7 +19,7 @@ jobs:
       - name: Generate SSH key
         run: ssh-keygen -t ed25519 -f "${HOME}/.ssh/id_ed25519" -q -P ""
       - name: Setup SSH Agent
-        uses: tanmancan/action-setup-ssh-agent-key@24fe7f84181d208a2194df1f28ac10333ce1461b # v1.0.0
+        uses: tanmancan/action-setup-ssh-agent-key@24fe7f84181d208a2194df1f28ac10333ce1461b # 1.0.0
       - name: Add key
         run: ssh-add
       - name: Store ansible-vault key to keyring
