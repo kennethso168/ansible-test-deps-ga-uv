@@ -5,7 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "ansible>=11.10.0,<12",
+    "ansible>=12.1,<13",
     "dnspython>=2.8.0",
     "jmespath>=1.0.1",
     "keyring>=25.6.0",
