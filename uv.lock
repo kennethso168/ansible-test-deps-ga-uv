@@ -8,14 +8,14 @@ resolution-markers = [
 
 [[package]]
 name = "ansible"
-version = "11.10.0"
+version = "13.4.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "ansible-core" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/a4/89/7792e7006a2695925df8c3c8e679075a9574d95e723bd8fdf0f211fb4055/ansible-11.10.0.tar.gz", hash = "sha256:f394e091c5dfd7e66c2f1e1d4459c44285004ba95925989b2d04c3a850ffcb96", size = 44842153, upload-time = "2025-09-09T18:40:16.283Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/e9/46/4f064be3a13f1239f259b3e6ebe94d52d609aac430eeaa6a0b36a5ca071d/ansible-13.4.0.tar.gz", hash = "sha256:6d741511abc1f724443aa16992fb615cc822a22da427ade925ff937ccd691eb1", size = 52775271, upload-time = "2026-02-24T17:37:24.69Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/ab/8a/5f602d5121e4b86dbe33f3b1a0024911fae16df3fb26449cd3c2d434d17a/ansible-11.10.0-py3-none-any.whl", hash = "sha256:e31d5fc5748353d3efc1d64348c3c1d969032486a4533b2253478442cb4ab024", size = 56649317, upload-time = "2025-09-09T18:40:11.061Z" },
+    { url = "https://files.pythonhosted.org/packages/96/62/3dff5689b6a6eb8d25d987507ab87660b76b0d87e152caf64ec045edac64/ansible-13.4.0-py3-none-any.whl", hash = "sha256:8c869fcc07954b53c5b125f1e914957cc7b541a92a7d512496207d80385a78eb", size = 55274148, upload-time = "2026-02-24T17:37:19.4Z" },
 ]
 
 [[package]]
@@ -36,7 +36,7 @@ wheels = [
 
 [[package]]
 name = "ansible-core"
-version = "2.18.9"
+version = "2.20.3"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "cryptography" },
@@ -45,9 +45,9 @@ dependencies = [
     { name = "pyyaml" },
     { name = "resolvelib" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/e7/6e/f9b8ec26b8862b0a09db2a637893d8ebdebf912823c6e83fdf0a79b494bf/ansible_core-2.18.9.tar.gz", hash = "sha256:a5f4a02aad5843e990ff7be1b92dd658a8b230de713ea643920e683ebf980da1", size = 3092054, upload-time = "2025-09-08T18:23:32.019Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/03/d6/2a1fda59f9bab7519f2e94a7bec8416e080dd2e17af4f4fb5d1e3d0c997d/ansible_core-2.20.3.tar.gz", hash = "sha256:38670ab2d2ffd67ee7e9e562f7c94e0927c8b7b4b0eb69233bc008c29e32d591", size = 3325132, upload-time = "2026-02-23T23:09:01.4Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/46/b3/ffd08ee6e0f5016d19cb16e4bb41cda94f1b8f91427e7eb6e5e742c87f5e/ansible_core-2.18.9-py3-none-any.whl", hash = "sha256:25206e1aac3bd30d95649a5ccf0d3646461d02b4dc265b5959e33b7ccd6f23f8", size = 2210581, upload-time = "2025-09-08T18:23:29.874Z" },
+    { url = "https://files.pythonhosted.org/packages/16/e0/2e5602b2a3d71622894e5ba0a6071e896f1fef795cf7acde5d13ff308833/ansible_core-2.20.3-py3-none-any.whl", hash = "sha256:7fe2da953192cac5d5eb37bfc984bf9339daa252e0e3d1deb5526eb1f8be9f7f", size = 2403438, upload-time = "2026-02-23T23:08:59.605Z" },
 ]
 
 [[package]]
@@ -137,7 +137,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "ansible", specifier = ">=11.10.0,<12" },
+    { name = "ansible", specifier = ">=13.4,<14" },
     { name = "dnspython", specifier = ">=2.8.0" },
     { name = "jmespath", specifier = ">=1.0.1" },
     { name = "keyring", specifier = ">=25.6.0" },
@@ -941,6 +941,8 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/6b/fa/3234f913fe9a6525a7b97c6dad1f51e72b917e6872e051a5e2ffd8b16fbb/ruamel.yaml.clib-0.2.14-cp314-cp314-macosx_15_0_arm64.whl", hash = "sha256:70eda7703b8126f5e52fcf276e6c0f40b0d314674f896fc58c47b0aef2b9ae83", size = 137970, upload-time = "2025-09-22T19:51:09.472Z" },
     { url = "https://files.pythonhosted.org/packages/ef/ec/4edbf17ac2c87fa0845dd366ef8d5852b96eb58fcd65fc1ecf5fe27b4641/ruamel.yaml.clib-0.2.14-cp314-cp314-musllinux_1_2_i686.whl", hash = "sha256:a0cb71ccc6ef9ce36eecb6272c81afdc2f565950cdcec33ae8e6cd8f7fc86f27", size = 739639, upload-time = "2025-09-22T19:51:10.566Z" },
     { url = "https://files.pythonhosted.org/packages/15/18/b0e1fafe59051de9e79cdd431863b03593ecfa8341c110affad7c8121efc/ruamel.yaml.clib-0.2.14-cp314-cp314-musllinux_1_2_x86_64.whl", hash = "sha256:e7cb9ad1d525d40f7d87b6df7c0ff916a66bc52cb61b66ac1b2a16d0c1b07640", size = 764456, upload-time = "2025-09-22T19:51:11.736Z" },
+    { url = "https://files.pythonhosted.org/packages/e7/cd/150fdb96b8fab27fe08d8a59fe67554568727981806e6bc2677a16081ec7/ruamel_yaml_clib-0.2.14-cp314-cp314-win32.whl", hash = "sha256:9b4104bf43ca0cd4e6f738cb86326a3b2f6eef00f417bd1e7efb7bdffe74c539", size = 102394, upload-time = "2025-11-14T21:57:36.703Z" },
+    { url = "https://files.pythonhosted.org/packages/bd/e6/a3fa40084558c7e1dc9546385f22a93949c890a8b2e445b2ba43935f51da/ruamel_yaml_clib-0.2.14-cp314-cp314-win_amd64.whl", hash = "sha256:13997d7d354a9890ea1ec5937a219817464e5cc344805b37671562a401ca3008", size = 122673, upload-time = "2025-11-14T21:57:38.177Z" },
 ]
 
 [[package]]
